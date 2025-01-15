@@ -9,6 +9,7 @@ function App() {
 
   return (
     <>
+      <p className='text-2xl text-center'>THIS IS THE POTIONS LIST</p>
       <PotionList potions={showingPotions}></PotionList>
     </>
   )

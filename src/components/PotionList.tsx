@@ -16,7 +16,6 @@ const PotionList: React.FC<PotionList> = ({potions}) => {
 
   return (
     <div className="flex flex-col bg-slate-500 w-[100%]">
-      <p className='text-2xl'>THIS IS THE POTION LIST</p>
 
       {potionRows.map((row, rowIndex) => (
         <div key={rowIndex} className="flex flex-col">
