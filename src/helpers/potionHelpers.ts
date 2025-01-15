@@ -1,4 +1,3 @@
-import { Ingredient } from "../types/Ingredient";
 import { Potion } from "../types/Potion";
 
 export function filterByLevelRequirement(potions: Potion[], level: number) {
