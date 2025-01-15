@@ -29,7 +29,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, potion }) => {
             </div>
           </div>
           <div className="border-r border-gray-400 h-[95%] mr-2 ml-2"></div>
-          <div className='text-4xl mt-2 text-center w-1/2 text-blue-500 underline'>SECONDARY EFFECTS
+          <div className='text-4xl mt-2 text-center w-1/2 text-blue-500'>SECONDARY EFFECTS
             <div className='flex-col'>
               {potion.effects.secondary.map((effect, index) => (
                 <div key={index} className="flex flex-col">

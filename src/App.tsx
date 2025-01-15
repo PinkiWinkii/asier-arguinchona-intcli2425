@@ -9,7 +9,7 @@ function App() {
 
   const [showingPotions, setShowingPotions] = useState(potions);
 
-  const [level, setLevel] = useState(0);
+  const [level, setLevel] = useState(50);
   const [rarity, setRarity] = useState('all');
   const [effect, setEffect] = useState('');
   const [craftTime, setCraftTime] = useState(0);

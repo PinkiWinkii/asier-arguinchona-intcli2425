@@ -19,9 +19,10 @@ const LevelFilter: React.FC<LevelFilter> = ({level, setLevel}) => {
           min="0"
           max="100"
           className="w-64"
+          value={level}
           onChange={(e) => setLevel(e.target.value)}
         />
-        <p>Level: {level}</p>
+        <p className='text-3xl'>Level: {level}</p>
       </div>
 
     </div>

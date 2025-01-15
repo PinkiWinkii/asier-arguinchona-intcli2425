@@ -32,7 +32,7 @@ const Filters: React.FC<FiltersProps> = ({ onEffectChange, setLevel, setRarity, 
         >
           CALCULATE CRAFTING TIME
         </button>
-        <div>CRAFTING TIME: {craftTime} mins</div>
+        <div className='mt-3 text-2xl'>CRAFTING TIME: {craftTime} mins</div>
       </div>
     </div>
   );
