@@ -60,7 +60,7 @@ function App() {
 
   return (
     <>
-      <p className='text-2xl text-center'>THIS IS THE POTIONS LIST</p>
+      <p className='text-4xl text-center'>EPIC POTIONS LIST</p>
       <PotionList potions={showingPotions}></PotionList>
       <Filters
         onEffectChange={handleEffectChange}
