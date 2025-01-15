@@ -8,7 +8,7 @@ interface PotionCard {
 
 const PotionCard: React.FC<PotionCard> = ({potion}) => {
   return (
-    <div className="flex w-[100%] border-2 border-yellow-500 rounded-lg bg-black">
+    <div className="flex w-[19%] border-2 border-yellow-500 rounded-lg bg-black mr-2 ml-2">
       {/* Columna izquierda: Imagen */}
       <div className="w-1/2 flex justify-center">
         <img 

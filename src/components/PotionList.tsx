@@ -8,21 +8,32 @@ interface PotionList {
 }
 
 const PotionList: React.FC<PotionList> = ({potions}) => {
-
   const potionRows = [];
+  // Divide las pociones en filas de 5
   for (let i = 0; i < potions.length; i += 5) {
     potionRows.push(potions.slice(i, i + 5));
   }
 
- return (
+  return (
     <div className="flex flex-col bg-slate-500 w-[100%]">
-      <p>THIS IS THE POTION LIST</p>
+      <p className='text-2xl'>THIS IS THE POTION LIST</p>
+
       {potionRows.map((row, rowIndex) => (
-        <div key={rowIndex} className="flex flex-row mb-4">
-          {/* Mapear las pociones dentro de cada fila */}
-          {row.map((potion, index) => (
-            <PotionCard key={index} potion={potion} />
-          ))}
+        <div key={rowIndex} className="flex flex-col">
+          {/* Añadir separador horizontal antes de la fila, excepto en la primera */}
+          {rowIndex > 0 && <div className="border-t border-gray-400 mb-4"></div>}
+
+          {/* Mapeo de las pociones dentro de cada fila */}
+          <div className="flex flex-row mb-4">
+            {row.map((potion, index) => (
+              <React.Fragment key={index}>
+                <PotionCard potion={potion} />
+                
+                {/* Agregar separador vertical después de cada poción que no sea la última */}
+                {index < row.length - 1 && <div className="border-r border-gray-400 h-64"></div>}
+              </React.Fragment>
+            ))}
+          </div>
         </div>
       ))}
     </div>
