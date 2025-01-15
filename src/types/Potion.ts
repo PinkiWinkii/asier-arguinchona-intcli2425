@@ -1,7 +1,9 @@
-import { Availability } from "./Availability";
+import { CraftingDetails } from "./CraftingDetails";
 import { Effect } from "./Effect";
 import { Ingredient } from "./Ingredient";
+import { MetaDetails } from "./MetaDetails";
 import { SecondaryEffect } from "./SecondaryEffect";
+import { UsageDetails } from "./UsageDetails";
 
 export interface Potion {
   id: string,
@@ -13,26 +15,8 @@ export interface Potion {
     secondary: SecondaryEffect[]
   },
   ingredients: Ingredient[],
-  crafting: {
-    station: string,
-    required_level: number,
-    time: {
-      unit: string,
-      amount: number,
-    },
-  },
-  usage: {
-    instructions: string[],
-    restrictions: {
-      levelRequirement: number,
-      classRestrictions: string[],
-      warnings: string[],
-    },
-  },
-  meta: {
-    created_by: string,
-    lore: string,
-    availability: Availability
-  },
+  crafting: CraftingDetails,
+  usage: UsageDetails,
+  meta: MetaDetails,
   image: string
 }
