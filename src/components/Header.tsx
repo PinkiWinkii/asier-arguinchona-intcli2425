@@ -1,5 +1,4 @@
 // src/components/Header.js
-import React from 'react';
 
 export const Header = () => {
   return (
