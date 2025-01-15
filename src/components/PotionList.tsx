@@ -15,7 +15,7 @@ const PotionList: React.FC<PotionList> = ({potions}) => {
   }
 
   return (
-    <div className="flex flex-col bg-slate-500 w-[100%]">
+    <div className="flex flex-col bg-slate-500 w-[100%] bg-opacity-0">
 
       {potionRows.map((row, rowIndex) => (
         <div key={rowIndex} className="flex flex-col">
