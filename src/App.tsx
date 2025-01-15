@@ -4,7 +4,6 @@ import PotionList from './components/PotionList'
 import { useEffect, useState } from 'react'
 import { filterByLevelRequirement, getPotionByRarity, findPotionByEffect, calculateCraftingTime } from './helpers/potionHelpers';
 import Filters from './components/Filters';
-import { Potion } from './types/Potion';
 
 function App() {
 
