@@ -21,7 +21,7 @@ const PotionCard: React.FC<PotionCard> = ({ potion }) => {
         <img
           src={potion.image}
           alt={potion.name}
-          className="max-w-full h-auto rounded-lg border-2 border-white"
+          className="w-[95%] h-[96%] mt-1 rounded-lg border-2 border-white"
         />
       </div>
 
@@ -30,7 +30,7 @@ const PotionCard: React.FC<PotionCard> = ({ potion }) => {
         {/* Parte superior (40% de la altura) */}
         <div className="h-[40%] flex justify-center items-center flex-col">
           <p>{potion.name}</p>
-          <p>{potion.rarity}</p>
+          <p>Tier: {potion.rarity}</p>
         </div>
 
         {/* Separador entre la parte superior e inferior */}
@@ -47,9 +47,9 @@ const PotionCard: React.FC<PotionCard> = ({ potion }) => {
         <div className="border-t-2 border-gray-300 my-2"></div>
 
         {/* Botón */}
-        <div className="flex justify-center mt-2">
+        <div className="flex justify-center mb-2">
           <button
-            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+            className="px-2 py-1 bg-orange-500 text-white rounded-lg hover:bg-orange-400"
             onClick={openModal}>
             View details
           </button>
