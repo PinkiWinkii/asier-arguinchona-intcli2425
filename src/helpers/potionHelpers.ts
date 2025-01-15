@@ -11,9 +11,10 @@ export function getPotionByRarity(potions: Potion[], rarity: string): Potion[] {
   return potions.filter(potion => potion.rarity === rarity);
 }
 
-export function listIngredients(potion: Potion): Ingredient[] {
-  return potion.ingredients;
+export function listIngredients(potion: Potion): string[] {
+  return potion.ingredients.map(ingredient => ingredient.name);
 }
+
 
 export function findPotionByEffect(potions: Potion[], effect: string): Potion[] {
   return potions.filter(potion =>

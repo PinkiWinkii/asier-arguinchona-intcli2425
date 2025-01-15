@@ -13,9 +13,10 @@ describe('Potion Functions', () => {
     expect(result).toEqual(potions);
   });
 
-  test('listIngredients should return the ingredients of a potion', () => {
+  test('listIngredients should return the names of the ingredients of a potion', () => {
     const result = listIngredients(potions[0]);
-    expect(result).toEqual(potions[0].ingredients);
+    const expectedIngredients = potions[0].ingredients.map(ingredient => ingredient.name); // Map to names of ingredients
+    expect(result).toEqual(expectedIngredients);
   });
 
   test('findPotionByEffect should return potions with specified secondary effect', () => {
