@@ -16,7 +16,7 @@ const PotionList: React.FC<PotionList> = ({ potions }) => {
 
   return (
 
-      <div className="flex flex-col w-[100%] h-[95%] bg-opacity-80 mt-8">
+      <div className="flex flex-col w-[100%] h-[95%] bg-opacity-80 mt-8 ml-8">
         {potionRows.map((row, rowIndex) => (
           <div key={rowIndex} className="flex flex-col">
             {/* Add separator except first line*/}
