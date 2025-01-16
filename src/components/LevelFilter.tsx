@@ -16,10 +16,10 @@ const LevelFilter: React.FC<LevelFilter> = ({level, setLevel}) => {
         <input
           type="range"
           id="level"
-          min="1"
+          min="0"
           max="100"
           className="w-64"
-          step={2}
+          step={1}
           value={level}
           onChange={(e) => setLevel(e.target.value)}
         />

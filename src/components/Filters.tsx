@@ -17,7 +17,7 @@ interface FiltersProps {
 const Filters: React.FC<FiltersProps> = ({ onEffectChange, setLevel, setRarity, level, calculateCraftTime, craftTime }) => {
 
   return (
-    <div className="flex justify-center items-center h-[120px] gap-28 mt-4 bg-white bg-opacity-25">
+    <div className="flex justify-center items-center h-[120px] gap-28 mt-4">
 
       <LevelFilter setLevel={setLevel} level={level}></LevelFilter>
 

@@ -16,11 +16,11 @@ const PotionList: React.FC<PotionList> = ({ potions }) => {
 
   return (
 
-      <div className="flex flex-col bg-slate-500 w-[100%] h-[95%] bg-opacity-80 mt-8">
+      <div className="flex flex-col w-[100%] h-[95%] bg-opacity-80 mt-8">
         {potionRows.map((row, rowIndex) => (
           <div key={rowIndex} className="flex flex-col">
-            {/* Añadir separador horizontal antes de la fila, excepto en la primera */}
-            {rowIndex > 0 && <div className="border-t border-gray-400 mb-4"></div>}
+            {/* Add separator except first line*/}
+            {rowIndex > 0 && <div className="border-2 rounded-lg border-gray-200 mb-4"></div>}
 
             {/* Mapeo de las pociones dentro de cada fila */}
             <div className="flex flex-row mb-4">
@@ -29,7 +29,7 @@ const PotionList: React.FC<PotionList> = ({ potions }) => {
                   <PotionCard potion={potion} />
 
                   {/* Agregar separador vertical después de cada poción que no sea la última */}
-                  {index < row.length - 1 && <div className="border-r border-gray-400 h-64"></div>}
+                  {index < row.length - 1 && <div className="border-2 rounded-lg border-gray-200 h-64"></div>}
                 </React.Fragment>
               ))}
             </div>
