@@ -9,7 +9,7 @@ interface LevelFilter {
 const LevelFilter: React.FC<LevelFilter> = ({level, setLevel}) => {
 
   return (
-    <div className="flex justify-center items-center gap-8 mt-4">
+    <div className="flex flex-col items-center bg-black bg-opacity-80 border-2 rounded-lg w-[300px] h-[90px]">
 
       <div className="flex flex-col items-center">
         <label className="text-lg">Level Requirement (0-100)</label>
