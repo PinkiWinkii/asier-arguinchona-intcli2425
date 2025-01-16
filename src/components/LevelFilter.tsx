@@ -3,15 +3,10 @@ import React from 'react';
 
 interface LevelFilter {
   level: number;
-  setLevel: React.Dispatch<React.SetStateAction<number>>;
+  setLevel: any;
 }
 
 const LevelFilter: React.FC<LevelFilter> = ({level, setLevel}) => {
-
-  const handleLevelChange = (level: string) => {
-    const numberLevel = Number(level);
-    setLevel(numberLevel);
-  }
 
   return (
     <div className="flex flex-col items-center bg-black bg-opacity-80 border-2 rounded-lg w-[300px] h-[90px]">
@@ -26,7 +21,7 @@ const LevelFilter: React.FC<LevelFilter> = ({level, setLevel}) => {
           className="w-64"
           step={1}
           value={level}
-          onChange={(e) => handleLevelChange(e.target.value)}
+          onChange={(e) => setLevel(e.target.value)}
         />
         <p className='text-3xl'>Level: {level}</p>
       </div>

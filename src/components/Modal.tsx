@@ -12,14 +12,14 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, potion }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 bottom-10">
+    <div className="absolute inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50 bottom-10">
       <button
-          className="px-4 absolute bottom-1 items-center justify-center text-white font-bold text-[50px] bg-black bg-opacity-80"
+          className="px-4 absolute bottom-1 border-2 border-white items-center justify-center text-white font-bold text-[50px] bg-black bg-opacity-90"
           onClick={onClose}
         >
           Close Modal
         </button>
-      <div className="bg-black bg-opacity-90 rounded-lg w-[65%] h-[80%] p-2">
+      <div className="bg-black bg-opacity-90 border-2 rounded-lg w-[65%] h-[80%] p-2">
         <div className='text-center text-4xl mb-2 underline'>{potion.name}</div>
         <div className='flex flex-row h-[30%]'>
           <div className='flex-col text-4xl mt-2 text-center w-1/2 text-red-400'>PRIMARY EFFECTS
@@ -42,8 +42,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, potion }) => {
 
         <div className="border-t border-gray-400 mb-4"></div>
 
-        <div className='flex flex-row h-[30%]'>
-          <div className='text-4xl mt-2 text-center w-1/2 text-purple-500'>INGREDIENTS
+        <div className='flex flex-row h-[30%] mb-2'>
+          <div className='text-4xl text-center w-1/2 text-purple-500'>INGREDIENTS
             <div className='flex-col'>
               {potion.ingredients.map((ingredient, index) => (
                 <div key={index} className="flex flex-col">
