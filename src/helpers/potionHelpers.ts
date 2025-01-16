@@ -22,5 +22,5 @@ export function findPotionByEffect(potions: Potion[], effect: string): Potion[] 
 }
 
 export function calculateCraftingTime(potions: Potion[]): number {
-  return potions.reduce((totalTime, potion) => totalTime + potion.crafting.time.amount, 0);
+  return potions.reduce((totalTime, potion) => totalTime + (potion.crafting.time.unit === 'minutes' ? potion.crafting.time.amount : potion.crafting.time.amount * 60), 0);
 }

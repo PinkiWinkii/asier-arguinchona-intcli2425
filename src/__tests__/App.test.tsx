@@ -7,7 +7,7 @@ describe('Potion Functions', () => {
     const result = filterByLevelRequirement(potions, 18);
     expect(result).toEqual([potions[0]]);
   });
-
+ 
   test('getPotionByRarity should return potions of specified rarity', () => {
     const result = getPotionByRarity(potions, 'legendary');
     expect(result).toEqual(potions);
