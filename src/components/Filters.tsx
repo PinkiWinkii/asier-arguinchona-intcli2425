@@ -1,5 +1,5 @@
 // src/components/Filters.tsx
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import RarityFilter from './RarityFilter';
 import InputFilter from './InputFilter';
 import LevelFilter from './LevelFilter';
@@ -7,26 +7,32 @@ import CraftingTimeFilter from './CraftingTimeFilter';
 
 interface FiltersProps {
   onEffectChange: (effects: string) => void;
-  setLevel: any;
-  setRarity: any;
+  setLevel: React.Dispatch<React.SetStateAction<number>>;
+  rarity: string;
+  setRarity: (rarity: string) => void;
   level: number;
-  calculateCraftTime: any;
+  calculateCraftTime: MouseEventHandler<HTMLButtonElement>;
   craftTime: number;
 }
 
-const Filters: React.FC<FiltersProps> = ({ onEffectChange, setLevel, setRarity, level, calculateCraftTime, craftTime }) => {
+const Filters: React.FC<FiltersProps> = ({ onEffectChange, setLevel, rarity, setRarity, level, calculateCraftTime, craftTime }) => {
 
   return (
-    <div className="flex justify-center items-center h-[120px] gap-28 mt-4">
+    <div className="flex flex-col justify-center items-center h-[200px] mt-4 bg-black border-2 rounded-lg">
 
-      <LevelFilter setLevel={setLevel} level={level}></LevelFilter>
+      <div>
+        <p className='text-center text-4xl mb-4 underline'>FILTERS</p>
+      </div>
 
-      <RarityFilter setRarity={setRarity}></RarityFilter>
+      <div className='flex flex-row justify-center items-center gap-28 py-2'>
+        <LevelFilter setLevel={setLevel} level={level}></LevelFilter>
 
-      <InputFilter onEffectChange={onEffectChange}></InputFilter>
+        <RarityFilter setRarity={setRarity} rarity={rarity}></RarityFilter>
 
-      <CraftingTimeFilter calculateCraftingTime={calculateCraftTime} craftingTime={craftTime}></CraftingTimeFilter>
-      
+        <InputFilter onEffectChange={onEffectChange}></InputFilter>
+
+        <CraftingTimeFilter calculateCraftingTime={calculateCraftTime} craftingTime={craftTime}></CraftingTimeFilter>
+      </div>
     </div>
   );
 };

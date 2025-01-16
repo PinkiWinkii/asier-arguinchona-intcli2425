@@ -58,7 +58,7 @@ function App() {
   return (
     <>
       <div className='flex flex-col h-[100%] w-[100%]'>
-        <p className='text-4xl text-center mb-8'>EPIC POTIONS LIST</p>
+        <p className='text-4xl text-center mb-4 underline'>EPIC POTIONS LIST</p>
         <div className='flex bg-black bg-opacity-80 border-4 rounded-lg border-blue-400 w-[100%] h-[620px]'>
           {showingPotions.length > 0 ?
             <PotionList potions={showingPotions} /> :
@@ -67,6 +67,7 @@ function App() {
         <Filters
           onEffectChange={handleEffectChange}
           setLevel={setLevel}
+          rarity={rarity}
           setRarity={setRarity}
           level={level}
           calculateCraftTime={handleCraftingTime}

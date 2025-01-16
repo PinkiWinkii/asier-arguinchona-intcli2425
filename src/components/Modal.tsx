@@ -12,7 +12,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, potion }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+    <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 bottom-10">
       <button
           className="px-4 absolute bottom-1 items-center justify-center text-white font-bold text-[50px] bg-black bg-opacity-80"
           onClick={onClose}
@@ -24,7 +24,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, potion }) => {
         <div className='flex flex-row h-[30%]'>
           <div className='flex-col text-4xl mt-2 text-center w-1/2 text-red-400'>PRIMARY EFFECTS
             <div className='flex-col'>
-              <p className='text-xl text-white'>{potion.effects.primary.attribute}</p>
+              <p className='text-xl text-white capitalize'>{potion.effects.primary.attribute}</p>
               <p className='text-xl text-white'>Duration: {potion.effects.primary.duration.amount} {potion.effects.primary.duration.unit}</p>
             </div>
           </div>
@@ -32,9 +32,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, potion }) => {
           <div className='text-4xl mt-2 text-center w-1/2 text-blue-500'>SECONDARY EFFECTS
             <div className='flex-col'>
               {potion.effects.secondary.map((effect, index) => (
-                <div key={index} className="flex flex-col">
-                  <p className='text-xl text-white no-underline'>{effect.attribute}</p>
-                  <p className='text-xl text-white no-underline'>Duration: {effect.duration.amount} {effect.duration.unit}</p>
+                <div key={index} className="flex flex-row text-center items-center justify-center">
+                  <p className='text-xl text-white no-underline capitalize'>{index + 1}.- {effect.attribute} - Duration: {effect.duration.amount} {effect.duration.unit}</p>
                 </div>
               ))}
             </div>
