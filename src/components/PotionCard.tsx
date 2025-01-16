@@ -30,7 +30,7 @@ const PotionCard: React.FC<PotionCard> = ({ potion }) => {
         {/* Parte superior (40% de la altura) */}
         <div className="h-[40%] flex justify-center items-center flex-col">
           <p>{potion.name}</p>
-          <p>Tier: {potion.rarity}</p>
+          <p className={`capitalize ${potion.rarity === 'legendary' ? 'text-orange-500' : potion.rarity === 'epic' ? 'text-red-500' : 'text-purple-500'}`}>Tier: {potion.rarity}</p>
         </div>
 
         {/* Separador entre la parte superior e inferior */}
